@@ -1,7 +1,4 @@
-require "daily_wines/version"
+require_relative '../config/environment'
 
-module Daily
-  module Wines
-    # Your code goes here...
-  end
+module DailyWines
 end
