@@ -1,4 +1,4 @@
-require_relative '../config/environment'
-
 module DailyWines
 end
+
+require_relative '../config/environment'

@@ -1,7 +1,6 @@
 #CLI Controller
 class DailyWines::CLI
 
-	t = Time.now()
 
 	def call
 		list_wines
@@ -10,8 +9,12 @@ class DailyWines::CLI
 	end
 
 	def list_wines
-		puts t.strftime("%m/%d/%y")
-		puts "Today's Wine Picks Are:"
+		t = Time.now()
+		puts ""
+		puts t.strftime("-------------- %m/%d/%y --------------")
+		puts ""
+		puts "-- Welcome! Today's Wine Picks Are: --"
+		puts ""
 		@wines = DailyWines::Wines.picks 
 		@wines.each.with.index(1) do |deal, i|
 			puts "#{i}. #{wine.name} - #{wine.category}"
