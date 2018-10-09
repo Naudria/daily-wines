@@ -1,4 +1,4 @@
-require "daily/wines/version"
+require "daily_wines/version"
 
 module Daily
   module Wines

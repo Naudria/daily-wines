@@ -1,17 +1,17 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "daily/wines/version"
+require "daily_wines/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "daily-wines"
-  spec.version       = Daily::Wines::VERSION
+  spec.version       = DailyWines::VERSION
   spec.authors       = ["'Rima Jean'"]
   spec.email         = ["'rima.jean@gmail.com'"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{This CLI program lists today's wine picks from WineSpectator.com.}
+  spec.description   = %q{User can select a daily wine pick from the list and view more info on the wine.}
+  spec.homepage      = "https://github.com/Naudria/daily-wines"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
