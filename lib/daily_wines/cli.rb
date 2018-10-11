@@ -15,8 +15,8 @@ class DailyWines::CLI
 		puts ""
 		puts "-- Welcome! Today's Wine Picks Are: --"
 		puts ""
-		@wines = DailyWines::Wines.picks
-		@wines.each.with.index(1) do |wine, i|
+		@wines = DailyWines::Wine.today 
+		@wines.each.with_index(1) do |wine, i|
 			puts "#{i}. #{wine.name} - #{wine.category}"
 		end
 	end
