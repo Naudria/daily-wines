@@ -36,12 +36,12 @@ class DailyWines::Wine
 	def self.scrape_wines
 		doc = Nokogiri::HTML(open("https://www.winespectator.com/dailypicks"))
 		wine = self.new
-		wine.name = doc.search(".mod-container:not(.clearfix) h5 a").each do |wine|
-			puts wine.name
+		wine.name = doc.search(".mod-container:not(.clearfix) h5 a").text
+		
 		# wine.price = doc.search("h6").text.strip
 		# wine.description = doc.search(".paragraph").text.strip
 		# wine.name = doc.search(".mod-container:not(.clearfix) h5 a").text.strip
-		end
+		wine
 	end
 
 end
