@@ -17,7 +17,7 @@ class DailyWines::CLI
 		puts ""
 		@wines = DailyWines::Wine.today 
 		@wines.each.with_index(1) do |wine, i|
-			puts "#{i}. #{wine.name} - #{wine.category}"
+			puts "#{i}. #{wine.name}"
 		end
 	end
 
