@@ -3,19 +3,19 @@ class DailyWines::Wine
 #attr_accessor is a method that tells the class to create setter and getter methods for each attribute
 	attr_accessor :name, :price, :description
 #Class variable that collects all the wine instances and puts it into an array
-	# @@all = []
 
-	def self.today
-		self.scrape_picks
-	end
+	 @@all = []
 
-	def self.scrape_picks
-		wines = []
+  def self.all #class reader to expose @@all class variable
+    @@all
+  end
 
-		wines << self.scrape_wines
+  def initialize
+    @@all << self
+  end
 
-		wines 
-	end
+end
+
 
 	# def initialize(name=nil, category=nil, price=nil) #-->the initialize method accepts arguments that it passes to each instance; nil is the default
 #The Initialize method sets instance variables; happens automatically on every object and doesn't need to be called
@@ -33,16 +33,7 @@ class DailyWines::Wine
 
 
 #Build a class method scrape_wines that returns instances of the wines based on the data scraped
-	def self.scrape_wines
-		doc = Nokogiri::HTML(open("https://www.winespectator.com/dailypicks"))
-		wine = self.new
-		wine.name = doc.search(".mod-container:not(.clearfix) h5 a").text
-		
-		# wine.price = doc.search("h6").text.strip
-		# wine.description = doc.search(".paragraph").text.strip
-		# wine.name = doc.search(".mod-container:not(.clearfix) h5 a").text.strip
-		wine
-	end
+	
 
-end
+# end
 
