@@ -23,6 +23,7 @@ class DailyWines::CLI
 	def menu
 		input = nil
 		while input != "exit"
+			puts ""
 			puts "Enter the wine you'd like more info on by its number or type exit."
 			input = gets.strip.downcase
 
@@ -42,6 +43,7 @@ class DailyWines::CLI
 	end
 
 		def goodbye
+			puts ""
 			puts "Cheers and have a great day!"
 			exit 
 		end
