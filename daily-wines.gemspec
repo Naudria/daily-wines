@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'Rima Jean'"]
   spec.email         = ["'rima.jean@gmail.com'"]
 
-  spec.summary       = %q{This CLI program lists today's wine picks from WineSpectator.com.}
-  spec.description   = %q{User can select a daily wine pick from the list and view more info on the wine.}
+  spec.summary       = "This CLI program lists today's wine picks from WineSpectator.com."
+  spec.description   = "User can select a daily wine pick from the list and view more info on the wine."
   spec.homepage      = "https://github.com/Naudria/daily-wines"
   spec.license       = "MIT"
 
