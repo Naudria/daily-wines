@@ -21,24 +21,24 @@ class DailyWines::CLI
 	end
 
 	def menu
-			input = nil
-			while input != "exit"
-				puts "Enter the wine you'd like more info on by its number or type exit."
-				input = gets.strip.downcase
+		input = nil
+		while input != "exit"
+			puts "Enter the wine you'd like more info on by its number or type exit."
+			input = gets.strip.downcase
 
-				if input.to_i > 0
-					the_wine = DailyWines::Wine.all[input.to_i-1]
-					puts ""
-					puts "#{the_wine.name} - #{the_wine.price}"
-					puts ""
-					puts "#{the_wine.description}"
-				elsif input == "exit"
-					goodbye
-				else
-					puts "Not sure what that means. Enter the wine you'd like more info on by its number or type exit."
-				end
+			if input.to_i > 0
+				the_wine = DailyWines::Wine.all[input.to_i-1]
+				puts ""
+				puts "#{the_wine.name} - #{the_wine.price}"
+				puts ""
+				puts "#{the_wine.description}"
+			elsif input == "exit"
+				goodbye
+			else
+				puts "Not sure what that means. Enter the wine you'd like more info on by its number or type exit."
 			end
 		end
+	end
 
 		def goodbye
 			puts "Cheers and have a great day!"
