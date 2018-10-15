@@ -32,6 +32,7 @@ class DailyWines::CLI
 				puts "#{the_wine.name} - #{the_wine.price}"
 				puts ""
 				puts "#{the_wine.description}"
+				puts ""
 			elsif input == "exit"
 				goodbye
 			else

@@ -1,8 +1,6 @@
 # Daily::Wines
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/daily/wines`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This CLI gem lists today's "Daily Wine Picks" from winespectator.com. If the user selects one of the three picks by its number, the program will provide more information on the wine, including its price, point rank, and a short description. The program then prompts the user to select another daily pick or exit.  
 
 ## Installation
 

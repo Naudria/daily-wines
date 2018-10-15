@@ -17,7 +17,7 @@ class DailyWines::Scraper
 
 			wine.name = content.css("h5 a").text
 			wine.price = content.css("h6").text
-			wine.description = content.css(".paragraph").text
+			wine.description = content.css(".paragraph").text.strip
 		end
 
 	end
