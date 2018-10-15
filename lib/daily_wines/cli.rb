@@ -8,13 +8,13 @@ class DailyWines::CLI
 		puts ""
 		puts "-- Welcome! Today's Wine Picks Are: --"
 		puts ""
+		DailyWines::Scraper.new.make_wines
 		list_wines
 		menu
 	end
 
 	
 	def list_wines
-		DailyWines::Scraper.new.make_wines
 		DailyWines::Wine.all.each_with_index do |wine, i|
 			puts "#{i+1}. #{wine.name}"
 		end
@@ -24,7 +24,7 @@ class DailyWines::CLI
 		input = nil
 		while input != "exit"
 			puts ""
-			puts "Enter the wine you'd like more info on by its number or type exit."
+			puts "Enter the wine you'd like more info on by its number, type 'list' to see the picks again, or type exit."
 			input = gets.strip.downcase
 
 			if input.to_i > 0
@@ -34,8 +34,8 @@ class DailyWines::CLI
 				puts ""
 				puts "#{the_wine.description}"
 				puts ""
-			elsif input == "exit"
-				goodbye
+			elsif input == "list"
+				list_wines
 			else
 				puts "Not sure what that means. Enter the wine you'd like more info on by its number or type exit."
 			end
