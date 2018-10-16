@@ -36,6 +36,8 @@ class DailyWines::CLI
 				puts ""
 			elsif input == "list"
 				list_wines
+			elsif input == "exit"
+				goodbye
 			else
 				puts "Not sure what that means. Enter the wine you'd like more info on by its number or type exit."
 			end
