@@ -6,15 +6,15 @@ class DailyWines::Scraper
 	end
 
 	def scrape_wines
-		self.get_wine_index.css(".mod-container:not(.clearfix)").first(3)
+		self.get_wine_index.css(".mod-container")
+		# self.get_wine_index.css(".mod-container:not(.clearfix)").first(3)
 	end
-
 
 
 	def make_wines
 		scrape_wines.each do |content|
 			wine = DailyWines::Wine.new
-
+			binding.pry
 			wine.name = content.css("h5 a").text
 			wine.price = content.css("h6").text
 			wine.description = content.css(".paragraph").text.strip

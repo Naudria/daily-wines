@@ -27,7 +27,7 @@ class DailyWines::CLI
 			puts "Enter the wine you'd like more info on by its number, type 'list' to see the picks again, or type exit."
 			input = gets.strip.downcase
 
-			if input.to_i > 0
+			if input.to_i > 0 && input.to_i < 4
 				the_wine = DailyWines::Wine.all[input.to_i-1]
 				puts ""
 				puts "#{the_wine.name} - #{the_wine.price}"
