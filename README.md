@@ -20,7 +20,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+After installation, type the command 'daily-wines' in the command line. You will be presented with a numbered list of the 3 wine picks for the day. From this menu, you can:
+
+Type a wine's number to access information about the wine such as price, points, and description
+Type 'list' to see the picks
+Type 'exit' to exit the program
+
 
 ## Development
 
