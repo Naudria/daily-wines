@@ -10,7 +10,9 @@ class DailyWines::Wine
     @@all
   end
 
-  def initialize
+  def initialize #In #initialize we use the self keyword to refer to the new object that has just been created by #new. 
+  	#We push self into the array that is stored in @@all. In this way, the @@all class variable will 
+  	#point to an ever-growing array that contains every instance of the Song class that gets created.
     @@all << self
   end
 

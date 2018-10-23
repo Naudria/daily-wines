@@ -6,7 +6,7 @@ class DailyWines::Scraper
 	end
 
 	def scrape_wines
-		self.get_wine_index.css(".mod-container:contains('span')")
+		self.get_wine_index.css(".mod-container:contains('points')")
 		# self.get_wine_index.css(".mod-container:not(.clearfix)").first(3)
 	end
 

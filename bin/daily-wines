@@ -3,3 +3,4 @@
 require_relative '../lib/daily_wines'
 
 DailyWines::CLI.new.call
+#In the namespace of module DailyWines, I have a class called CLI that I can instantiate, use call method on it, and the program starts. 
