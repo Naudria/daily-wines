@@ -6,13 +6,12 @@ class DailyWines::Wine
 
 	 @@all = []
 
-  def self.all #class reader to expose @@all class variable
+  def self.all #class reader to expose @@all class variable. A custom constructor that wraps .new and saves all
+  	#wine instances
     @@all
   end
 
-  def initialize #In #initialize we use the self keyword to refer to the new object that has just been created by #new. 
-  	#We push self into the array that is stored in @@all. In this way, the @@all class variable will 
-  	#point to an ever-growing array that contains every instance of the Song class that gets created.
+  def initialize 
     @@all << self
   end
 
